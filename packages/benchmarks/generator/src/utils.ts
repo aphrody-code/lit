@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 
 // Level is a string denoting position in the tree, e.g. '0_2_1'
 // Depth for '0_2_1' is 3

@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {promisify} from 'util';
-import {exec as execCb} from 'child_process';
-import * as fs from 'fs/promises';
-import * as path from 'path';
+import {promisify} from 'node:util';
+import {exec as execCb} from 'node:child_process';
+import * as fs from 'node:fs/promises';
+import * as path from 'node:path';
 import {PackageJson} from '@lit-labs/analyzer/lib/model.js';
 
 const exec = promisify(execCb);

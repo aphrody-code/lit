@@ -1,7 +1,7 @@
-import {promisify} from 'util';
-import {join} from 'path';
-import {copyFile, mkdir, readdir, rm, stat} from 'fs/promises';
-import {exec as _exec} from 'child_process';
+import {promisify} from 'node:util';
+import {join} from 'node:path';
+import {copyFile, mkdir, readdir, rm, stat} from 'node:fs/promises';
+import {exec as _exec} from 'node:child_process';
 import {normalizePath} from './util.js';
 
 const exec = promisify(_exec);

@@ -9,7 +9,7 @@ const pixelmatch = require('pixelmatch');
 const puppeteer = require('puppeteer');
 const expect = require('chai').expect;
 const PNG = require('pngjs').PNG;
-const fs = require('fs');
+const fs = require('node:fs');
 
 const generating = process.argv.includes('--generate-screenshots');
 

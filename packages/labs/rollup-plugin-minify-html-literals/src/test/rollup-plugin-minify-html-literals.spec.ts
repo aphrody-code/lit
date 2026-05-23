@@ -1,6 +1,6 @@
 import * as assert from 'node:assert/strict';
 import {beforeEach, describe as suite, test} from 'node:test';
-import * as path from 'path';
+import * as path from 'node:path';
 import {TransformPluginContext} from 'rollup';
 import sinon from 'sinon';
 import minifyHTML, {Options} from '../index.js';

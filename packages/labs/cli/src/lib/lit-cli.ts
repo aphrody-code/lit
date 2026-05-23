@@ -20,8 +20,8 @@ import {makeHelpCommand} from './commands/help.js';
 import {localize} from './commands/localize.js';
 import {makeLabsCommand} from './commands/labs.js';
 import {makeInitCommand} from './commands/init.js';
-import {createRequire} from 'module';
-import * as childProcess from 'child_process';
+import {createRequire} from 'node:module';
+import * as childProcess from 'node:child_process';
 export type {Command, ResolvedCommand, ReferenceToCommand} from './command.js';
 
 export interface Options {

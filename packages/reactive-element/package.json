@@ -223,7 +223,7 @@
     "build:esbuild": "wireit",
     "check-version": "wireit",
     "checksize": "wireit",
-    "prepublishOnly": "npm run check-version",
+    "prepublishOnly": "bun run check-version",
     "test": "wireit",
     "test:dev": "wireit",
     "test:prod": "wireit",

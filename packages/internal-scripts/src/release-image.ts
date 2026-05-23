@@ -8,9 +8,9 @@ import parseChangelog from 'changelog-parser';
 import commandLineArgs from 'command-line-args';
 import {marked} from 'marked';
 import puppeteer from 'puppeteer';
-import {readFile} from 'fs/promises';
-import path from 'path';
-import {existsSync, readFileSync} from 'fs';
+import {readFile} from 'node:fs/promises';
+import path from 'node:path';
+import {existsSync, readFileSync} from 'node:fs';
 
 const optionDefinitions = [
   {

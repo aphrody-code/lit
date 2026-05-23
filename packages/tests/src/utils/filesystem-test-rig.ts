@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as fs from 'fs/promises';
-import * as pathlib from 'path';
-import * as os from 'os';
+import * as fs from 'node:fs/promises';
+import * as pathlib from 'node:path';
+import * as os from 'node:os';
 
-import type {Stats} from 'fs';
+import type {Stats} from 'node:fs';
 
 /**
  * A test rig for managing a temporary filesystem.

@@ -8,8 +8,8 @@ cd $( cd "$(dirname "${BASH_SOURCE[0]}")/../.." ; pwd -P )
 if [ ! -d "generator/build" ]; then
   echo "Installing/building generator (one-time)"
   pushd generator
-  npm i
-  npm run build
+  bun install
+  bun run build
   popd
 fi
 

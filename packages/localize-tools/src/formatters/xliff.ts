@@ -6,7 +6,7 @@
 
 import * as xmldom from '@xmldom/xmldom';
 import fsExtra from 'fs-extra';
-import * as pathLib from 'path';
+import * as pathLib from 'node:path';
 import type {Config} from '../types/config.js';
 import type {XliffConfig} from '../types/formatters.js';
 import type {Locale} from '../types/locale.js';

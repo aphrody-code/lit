@@ -12,7 +12,7 @@ import {
 // TODO (justinfagnani): get from ESLintUtils if possible?
 // See q: https://discord.com/channels/1026804805894672454/1084238921677946992/1199174067459198986
 import ts from 'typescript';
-import * as path from 'path';
+import * as path from 'node:path';
 
 export const createRule = ESLintUtils.RuleCreator(
   // TODO (justinfagnani): set up rule doc publishing pipeline for lit.dev

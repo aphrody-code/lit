@@ -127,9 +127,9 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run build",
+    "vscode:prepublish": "bun run build",
     "build": "wireit",
-    "pretest": "npm run build && npm run lint",
+    "pretest": "bun run build && bun run lint",
     "lint": "eslint src --ext ts",
     "test": "wireit",
     "test:unit": "wireit",

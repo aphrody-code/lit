@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as path from 'path';
+import * as path from 'node:path';
 import {suite} from 'uvu';
 // eslint-disable-next-line import/extensions
 import * as assert from 'uvu/assert';
 import {runAndLog} from '../../cli.js';
 import fsExtra from 'fs-extra';
-import {dirname} from 'path';
-import {fileURLToPath} from 'url';
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 import {assertGoldensMatch} from '@lit-internal/tests/utils/assert-goldens.js';
 

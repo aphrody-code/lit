@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Console} from 'console';
+import {Console} from 'node:console';
 
 export type Level = 'error' | 'warn' | 'info' | 'verbose' | 'debug';
 

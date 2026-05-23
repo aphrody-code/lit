@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {AsyncLocalStorage} from 'async_hooks';
+import {AsyncLocalStorage} from 'node:async_hooks';
 import {configureReentrantLocalization} from '@lit/localize/init/reentrant.js';
 
 import type {LocaleModule} from '@lit/localize';

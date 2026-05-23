@@ -7,7 +7,7 @@
 import * as xmldom from '@xmldom/xmldom';
 import fastGlob from 'fast-glob';
 import fsExtra from 'fs-extra';
-import * as pathlib from 'path';
+import * as pathlib from 'node:path';
 import type {Config} from '../types/config.js';
 import type {XlbConfig} from '../types/formatters.js';
 import type {Locale} from '../types/locale.js';

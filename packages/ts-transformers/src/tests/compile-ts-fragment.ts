@@ -5,7 +5,7 @@
  */
 
 import ts from 'typescript';
-import * as pathlib from 'path';
+import * as pathlib from 'node:path';
 
 /**
  * Filesystem caching for the TypeScript CompilerHost implementation used in

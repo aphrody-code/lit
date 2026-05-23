@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:declarations && vite build",
+    "build": "bun run build:declarations && vite build",
     "typecheck": "vue-tsc --noEmit",
     "build:declarations": "vue-tsc --declaration --emitDeclarationOnly",
     "preview": "vite preview"

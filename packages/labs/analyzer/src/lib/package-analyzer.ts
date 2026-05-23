@@ -6,7 +6,7 @@
 
 import ts from 'typescript';
 import {AbsolutePath} from './paths.js';
-import * as path from 'path';
+import * as path from 'node:path';
 import {Analyzer} from './analyzer.js';
 
 export interface AnalyzerOptions {

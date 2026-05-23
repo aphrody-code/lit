@@ -1,5 +1,5 @@
-import {readdir, copyFile, mkdir} from 'fs/promises';
-import {join} from 'path';
+import {readdir, copyFile, mkdir} from 'node:fs/promises';
+import {join} from 'node:path';
 import {normalizePath} from './util.js';
 
 const usage = `

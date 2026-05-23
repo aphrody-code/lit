@@ -5,8 +5,8 @@
  */
 
 import {litProdConfig} from '../../rollup-common.js';
-import {createRequire} from 'module';
-import * as path from 'path';
+import {createRequire} from 'node:module';
+import * as path from 'node:path';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 

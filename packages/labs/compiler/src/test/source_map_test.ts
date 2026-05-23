@@ -9,9 +9,9 @@ import {SourceMapConsumer} from 'source-map';
 import {test} from 'uvu';
 // eslint-disable-next-line import/extensions
 import * as assert from 'uvu/assert';
-import {readFile} from 'fs/promises';
-import * as url from 'url';
-import * as path from 'path';
+import {readFile} from 'node:fs/promises';
+import * as url from 'node:url';
+import * as path from 'node:path';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const TEST_FILES_DIR = path.resolve(

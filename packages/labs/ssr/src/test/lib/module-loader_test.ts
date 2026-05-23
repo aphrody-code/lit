@@ -8,7 +8,7 @@ import {ModuleLoader} from '../../lib/module-loader.js';
 import {test} from 'uvu';
 // eslint-disable-next-line import/extensions
 import * as assert from 'uvu/assert';
-import * as path from 'path';
+import * as path from 'node:path';
 
 const testIndex = new URL(
   '../test-files/module-loader/index.js',

@@ -5,7 +5,7 @@
  */
 
 import {litProdConfig} from '../../rollup-common.js';
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 
 export const defaultConfig = (options = {}) =>
   litProdConfig({

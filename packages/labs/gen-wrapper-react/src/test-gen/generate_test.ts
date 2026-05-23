@@ -7,8 +7,8 @@
 import {test} from 'uvu';
 // eslint-disable-next-line import/extensions
 import * as assert from 'uvu/assert';
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 import {createPackageAnalyzer} from '@lit-labs/analyzer/package-analyzer.js';
 import {AbsolutePath} from '@lit-labs/analyzer/lib/paths.js';
 import {

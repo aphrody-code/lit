@@ -1,6 +1,6 @@
-import {promisify} from 'util';
-import {spawn, exec as _exec} from 'child_process';
-import {join} from 'path';
+import {promisify} from 'node:util';
+import {spawn, exec as _exec} from 'node:child_process';
+import {join} from 'node:path';
 import {normalizePath} from './util.js';
 
 const exec = promisify(_exec);

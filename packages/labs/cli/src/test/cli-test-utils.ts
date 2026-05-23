@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Writable} from 'stream';
+import {Writable} from 'node:stream';
 import {LitConsole} from '../lib/console.js';
-import {ConsoleConstructorOptions} from 'console';
-import * as pathlib from 'path';
-import * as url from 'url';
+import {ConsoleConstructorOptions} from 'node:console';
+import * as pathlib from 'node:path';
+import * as url from 'node:url';
 import {FilesystemTestRig} from '@lit-internal/tests/utils/filesystem-test-rig.js';
 
 export class BufferedWritable extends Writable {

@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as path from 'path';
-import {promises as fs} from 'fs';
-import {fileURLToPath, pathToFileURL} from 'url';
-import * as vm from 'vm';
+import * as path from 'node:path';
+import {promises as fs} from 'node:fs';
+import {fileURLToPath, pathToFileURL} from 'node:url';
+import * as vm from 'node:vm';
 import enhancedResolve from 'enhanced-resolve';
-import {builtinModules} from 'module';
+import {builtinModules} from 'node:module';
 
 const builtIns = new Set(builtinModules);
 

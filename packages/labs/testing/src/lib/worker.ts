@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {parentPort, workerData} from 'worker_threads';
+import {parentPort, workerData} from 'node:worker_threads';
 import {render} from '@lit-labs/ssr';
 
 import type {PayloadWithWorkerInitModules} from './lit-ssr-plugin.js';

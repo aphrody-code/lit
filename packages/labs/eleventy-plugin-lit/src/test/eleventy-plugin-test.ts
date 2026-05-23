@@ -7,10 +7,10 @@
 import {suite} from 'uvu';
 // eslint-disable-next-line import/extensions
 import * as assert from 'uvu/assert';
-import * as pathlib from 'path';
-import * as fs from 'fs/promises';
-import {fileURLToPath} from 'url';
-import {spawn, ChildProcess} from 'child_process';
+import * as pathlib from 'node:path';
+import * as fs from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {spawn, ChildProcess} from 'node:child_process';
 import stripIndent from 'strip-indent';
 
 const __filename = fileURLToPath(import.meta.url);

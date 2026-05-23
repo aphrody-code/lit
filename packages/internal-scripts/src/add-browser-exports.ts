@@ -13,10 +13,10 @@
 // After building the script run from monorepo root:
 // `node packages/internal-scripts/bin/add-browser-exports.js`
 
-import assert from 'assert';
-import {execSync} from 'child_process';
-import {readFile, writeFile} from 'fs/promises';
-import {resolve, relative} from 'path';
+import assert from 'node:assert';
+import {execSync} from 'node:child_process';
+import {readFile, writeFile} from 'node:fs/promises';
+import {resolve, relative} from 'node:path';
 
 testScriptIntegrity();
 

@@ -10,8 +10,8 @@ import {LitCli} from '../lib/lit-cli.js';
 import {LitConsole} from '../lib/console.js';
 import {BufferedWritable, symlinkAllCommands} from './cli-test-utils.js';
 import {ReferenceToCommand} from '../lib/command.js';
-import {ConsoleConstructorOptions} from 'console';
-import * as stream from 'stream';
+import {ConsoleConstructorOptions} from 'node:console';
+import * as stream from 'node:stream';
 import {suite} from './uvu-wrapper.js';
 import {FilesystemTestRig} from '@lit-internal/tests/utils/filesystem-test-rig.js';
 

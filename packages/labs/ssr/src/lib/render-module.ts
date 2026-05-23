@@ -6,7 +6,7 @@
 
 import {getWindow} from '../lib/dom-shim.js';
 import {ModuleLoader} from './module-loader.js';
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 
 /**
  * Imports a module into a web-like rendering VM content and calls the function

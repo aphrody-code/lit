@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as path from 'path';
-import {pathToFileURL} from 'url';
-import {Worker} from 'worker_threads';
+import * as path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {Worker} from 'node:worker_threads';
 import type {Message} from './worker/types.js';
 
 type LitPluginOptions = {
@@ -104,7 +104,7 @@ function configureVm(
   resolvedComponentModules: string[]
 ) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  if (require('vm').Module === undefined) {
+  if (require('node:vm').Module === undefined) {
     // Show a more friendly error message if the --experimental-vm-modules
     // flag is missing.
     const red = '\u001b[31m';

@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as fs from 'fs';
+import * as fs from 'node:fs';
 import * as jsonSchema from 'jsonschema';
-import * as pathLib from 'path';
+import * as pathLib from 'node:path';
 import {KnownError} from './error.js';
 import type {Config, ConfigFile} from './types/config.js';
-import {dirname} from 'path';
-import {fileURLToPath} from 'url';
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 export type {Config} from './types/config.js';
 export type {

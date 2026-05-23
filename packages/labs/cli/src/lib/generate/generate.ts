@@ -10,10 +10,10 @@ import {
 } from '@lit-labs/analyzer/package-analyzer.js';
 import {FileTree, writeFileTree} from '@lit-labs/gen-utils/lib/file-utils.js';
 import {LitCli} from '../lit-cli.js';
-import * as path from 'path';
+import * as path from 'node:path';
 import {Command, ResolvedCommand} from '../command.js';
 import {Package} from '@lit-labs/analyzer/lib/model.js';
-import {EOL} from 'os';
+import {EOL} from 'node:os';
 import * as ts from 'typescript';
 
 const reactCommand: Command = {

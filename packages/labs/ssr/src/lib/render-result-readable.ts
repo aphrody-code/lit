@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Readable} from 'stream';
+import {Readable} from 'node:stream';
 import {RenderResult} from './render-result.js';
 import {ThunkedRenderResult, Thunk} from './render-result.js';
 

@@ -3,7 +3,7 @@
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import * as path from 'path';
+import * as path from 'node:path';
 import {
   Package,
   PackageJson,

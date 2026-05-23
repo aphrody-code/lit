@@ -15,10 +15,10 @@ import {compileLitTemplates} from '@lit-labs/compiler';
 import {test} from 'uvu';
 // eslint-disable-next-line import/extensions
 import * as assert from 'uvu/assert';
-import {existsSync, readdirSync} from 'fs';
-import {readFile, writeFile} from 'fs/promises';
-import * as url from 'url';
-import * as path from 'path';
+import {existsSync, readdirSync} from 'node:fs';
+import {readFile, writeFile} from 'node:fs/promises';
+import * as url from 'node:url';
+import * as path from 'node:path';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const TEST_FILES_DIR = path.resolve(__dirname, '../test_files');

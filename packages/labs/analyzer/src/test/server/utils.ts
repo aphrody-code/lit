@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 import ts from 'typescript';
-import {fileURLToPath} from 'url';
+import {fileURLToPath} from 'node:url';
 import {AbsolutePath, Analyzer} from '../../index.js';
 import {createPackageAnalyzer} from '../../package-analyzer.js';
 

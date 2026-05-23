@@ -23,7 +23,7 @@ import {
   stringifyDiagnostics,
   parseStringAsTemplateLiteral,
 } from '../typescript.js';
-import * as pathLib from 'path';
+import * as pathLib from 'node:path';
 import {LitLocalizer} from '../index.js';
 
 type TypeScriptTransformerFactoryFactory = (

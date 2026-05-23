@@ -1,4 +1,4 @@
-const path = require('path').posix;
+const path = require('node:path').posix;
 
 module.exports = (base, p) => {
   const relativePath = path.relative(base, p);

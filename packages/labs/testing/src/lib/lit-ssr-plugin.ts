@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Worker} from 'worker_threads';
-import * as pathlib from 'path';
+import {Worker} from 'node:worker_threads';
+import * as pathlib from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {litSsrPluginCommand} from './constants.js';
 

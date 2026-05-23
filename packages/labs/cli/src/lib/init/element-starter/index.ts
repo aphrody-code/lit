@@ -13,7 +13,7 @@ import {generateElement} from './templates/lib/element.js';
 import {CommandResult} from '../../command.js';
 import {InitCommandOptions} from '../../commands/init.js';
 import {LitCli} from '../../lit-cli.js';
-import path from 'path';
+import path from 'node:path';
 
 export const generateLitElementStarter = async (
   options: InitCommandOptions

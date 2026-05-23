@@ -6,8 +6,8 @@
 
 import * as assert from 'node:assert';
 import {beforeEach, describe as suite, test} from 'node:test';
-import path from 'path';
-import {fileURLToPath} from 'url';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 import {AbsolutePath} from '../../../index.js';
 import {
   getSourceFilename,

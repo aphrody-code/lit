@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as path from 'path';
+import * as path from 'node:path';
 import minimist from 'minimist';
 import {KnownError, unreachable} from './error.js';
 import type {Config} from './types/config.js';
@@ -17,9 +17,9 @@ import type {
   TransformOutputConfig,
   RuntimeOutputConfig,
 } from './types/modes.js';
-import {dirname} from 'path';
-import {fileURLToPath} from 'url';
-import * as fs from 'fs/promises';
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import * as fs from 'node:fs/promises';
 import 'source-map-support/register.js';
 
 const usage = `

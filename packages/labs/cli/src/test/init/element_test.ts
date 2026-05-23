@@ -11,7 +11,7 @@ import {suite} from '../uvu-wrapper.js';
 import {FilesystemTestRig} from '@lit-internal/tests/utils/filesystem-test-rig.js';
 import {symlinkAllCommands, TestConsole} from '../cli-test-utils.js';
 import {assertGoldensMatch} from '@lit-internal/tests/utils/assert-goldens.js';
-import path from 'path';
+import path from 'node:path';
 
 interface TestContext {
   testConsole: TestConsole;

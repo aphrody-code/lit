@@ -7,10 +7,10 @@
 import Koa from 'koa';
 import staticFiles from 'koa-static';
 import koaNodeResolve from 'koa-node-resolve';
-import {URL} from 'url';
-import * as path from 'path';
+import {URL} from 'node:url';
+import * as path from 'node:path';
 import {ModuleLoader} from '../../lib/module-loader.js';
-import {Readable} from 'stream';
+import {Readable} from 'node:stream';
 import mount from 'koa-mount';
 
 const {nodeResolve} = koaNodeResolve;

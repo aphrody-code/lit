@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 
 const packageFile = fs.readFileSync(path.resolve('package.json'));
 const {version} = JSON.parse(packageFile);

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 import {
   playwrightLauncher,
   PlaywrightLauncherArgs,

@@ -253,7 +253,10 @@ export const createComponent = <
     // Props to be set on element with setProperty
     const elementProps: Record<string, unknown> = {};
 
-    for (const [k, v] of Object.entries(props)) {
+    // for...in avoids the intermediate [key,value][] array that
+    // Object.entries() would allocate on every render.
+    for (const k in props) {
+      const v = (props as Record<string, unknown>)[k];
       if (reservedReactProperties.has(k)) {
         // React does *not* handle `className` for custom elements so
         // coerce it to `class` so it's handled correctly.

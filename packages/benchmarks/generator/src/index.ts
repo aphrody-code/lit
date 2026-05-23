@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import {main as tachometer} from 'tachometer/lib/cli.js';
 import tablePkg from 'table';
 const {table, getBorderCharacters} = tablePkg;

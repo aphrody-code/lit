@@ -5,7 +5,7 @@
  */
 
 import {litProdConfig} from '../../../rollup-common.js';
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 
 export default litProdConfig({
   packageName: createRequire(import.meta.url)('./package.json').name,

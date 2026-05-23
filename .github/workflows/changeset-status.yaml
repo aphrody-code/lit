@@ -18,17 +18,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24.5
-          cache: 'npm'
+          bun-version: latest
           cache-dependency-path: package-lock.json
 
       - name: Checkout and NPM install
         run: |
           git checkout main
           git checkout ${{ github.sha }}
-          npm ci
+          bun install --frozen-lockfile
 
       - name: Changeset status
-        run: npm run changeset status -- --since=main
+        run: bun run changeset status -- --since=main

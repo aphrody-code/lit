@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {parentPort} from 'worker_threads';
+import {parentPort} from 'node:worker_threads';
 import {render} from '@lit-labs/ssr';
 import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 

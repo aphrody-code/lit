@@ -5,8 +5,8 @@
  */
 
 import fastGlob from 'fast-glob';
-import * as fs from 'fs/promises';
-import * as pathlib from 'path';
+import * as fs from 'node:fs/promises';
+import * as pathlib from 'node:path';
 
 const main = async () => {
   const [, , root, dest, ...globs] = process.argv;

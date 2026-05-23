@@ -13,10 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24.5
-          cache: 'npm'
+          bun-version: latest
           cache-dependency-path: package-lock.json
 
       - uses: google/wireit@setup-github-actions-caching/v2
@@ -27,18 +26,18 @@ jobs:
           # version regardless of package-lock
           # https://github.com/giggio/node-chromedriver?tab=readme-ov-file#detect-chromedriver-version
           DETECT_CHROMEDRIVER_VERSION: true
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Build
         run: |
           cd packages/benchmarks
-          npm run build
+          bun run build
 
       # lit-html:kitchen-sink
       - name: Benchmark lit-html/kitchen-sink
         run: |
           cd packages/benchmarks
-          npx tachometer \
+          bunx tachometer \
             --config lit-html/kitchen-sink/tachometer.json \
             --json-file lit-html-kitchen-sink.json
 
@@ -46,7 +45,7 @@ jobs:
       - name: Benchmark lit-html/template-heavy
         run: |
           cd packages/benchmarks
-          npx tachometer \
+          bunx tachometer \
             --config lit-html/template-heavy/tachometer.json \
             --json-file lit-html-template-heavy.json
 
@@ -54,7 +53,7 @@ jobs:
       - name: Benchmark lit-html/repeat
         run: |
           cd packages/benchmarks
-          npx tachometer \
+          bunx tachometer \
             --config lit-html/repeat/tachometer.json \
             --json-file lit-html-repeat.json
 
@@ -62,7 +61,7 @@ jobs:
       - name: Benchmark lit-element/list
         run: |
           cd packages/benchmarks
-          npx tachometer \
+          bunx tachometer \
             --config lit-element/list/tachometer.json \
             --json-file lit-element-list.json
 
@@ -70,7 +69,7 @@ jobs:
       - name: Benchmark reactive-element/list
         run: |
           cd packages/benchmarks
-          npx tachometer \
+          bunx tachometer \
             --config reactive-element/list/tachometer.json \
             --json-file reactive-element-list.json
 

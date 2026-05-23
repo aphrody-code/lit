@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as fs from 'fs';
-import * as process from 'process';
+import * as fs from 'node:fs';
+import * as process from 'node:process';
 
 /**
  * Takes the `publishedPackages` output of the `changesets/action` GitHub action

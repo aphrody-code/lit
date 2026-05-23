@@ -13,16 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24.5
-          cache: 'npm'
+          bun-version: latest
           cache-dependency-path: package-lock.json
 
       - uses: google/wireit@setup-github-actions-caching/v2
 
       - name: NPM install
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       # This is needed to be able to read it from sizecheck-report.yaml to
       # comment on the correct PR
@@ -32,7 +31,7 @@ jobs:
         run: echo $PR_NUMBER > ./scripts/pr_number.txt
 
       - name: Generate size report
-        run: npm run benchmark:size
+        run: bun run benchmark:size
 
       - name: Upload artifacts
         if: ${{ success() || failure() }}

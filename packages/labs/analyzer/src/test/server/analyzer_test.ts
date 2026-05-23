@@ -6,7 +6,7 @@
 
 import * as assert from 'node:assert';
 import {describe as suite, test} from 'node:test';
-import * as path from 'path';
+import * as path from 'node:path';
 import {
   getOutputFilename,
   getSourceFilename,

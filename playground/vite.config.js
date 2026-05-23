@@ -1,6 +1,6 @@
 import {defineConfig} from 'vite';
-import {access} from 'fs/promises';
-import {dirname, join} from 'path';
+import {access} from 'node:fs/promises';
+import {dirname, join} from 'node:path';
 
 export default defineConfig({
   esbuild: {

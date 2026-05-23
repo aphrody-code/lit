@@ -8,9 +8,9 @@
 import * as assert from 'uvu/assert';
 import fsExtra from 'fs-extra';
 import * as dirCompare from 'dir-compare';
-import * as path from 'path';
+import * as path from 'node:path';
 import * as diff from 'diff';
-import {execSync, execFileSync} from 'child_process';
+import {execSync, execFileSync} from 'node:child_process';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const red = '\x1b[31m';

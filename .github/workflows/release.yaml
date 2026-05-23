@@ -38,15 +38,14 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24.5
-          cache: 'npm'
+          bun-version: latest
           cache-dependency-path: lit/package-lock.json
 
       - name: Install Dependencies
         working-directory: lit
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Create Release Pull Request or Publish to npm
         # The id of this step must not be "changesets", or else the step will be invisible
@@ -64,8 +63,8 @@ jobs:
           # This prevents `changesets/action` from changing the git username and
           # email.
           setupGitUser: false
-          version: npm run version
-          publish: npm run release
+          version: bun run version
+          publish: bun run release
         env:
           HUSKY: 0
           GITHUB_TOKEN: ${{ secrets.LIT_ROBOT_AUTOMATION_PAT }}

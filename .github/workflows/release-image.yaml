@@ -22,20 +22,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24.5
-          cache: 'npm'
+          bun-version: latest
           cache-dependency-path: package-lock.json
 
       - uses: google/wireit@setup-github-actions-caching/v2
 
       - name: NPM install
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Build release-image script
         working-directory: packages/internal-scripts
-        run: npm run build
+        run: bun run build
 
       - name: Create release image
         env:

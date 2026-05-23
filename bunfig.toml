@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: Apache-2.0
+# Synced toolchain (gts reference): Bun runtime + oxlint + oxfmt + n2b.
+[install]
+exact = true
+[test]
+coverage = false

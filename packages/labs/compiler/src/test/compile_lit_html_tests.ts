@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as url from 'url';
-import * as path from 'path';
+import * as url from 'node:url';
+import * as path from 'node:path';
 import ts from 'typescript';
 import {compileLitTemplates} from '@lit-labs/compiler';
 

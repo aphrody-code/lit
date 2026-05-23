@@ -1,6 +1,6 @@
-import {promisify} from 'util';
-import {exec as _exec} from 'child_process';
-import {access, rm, readFile, writeFile} from 'fs/promises';
+import {promisify} from 'node:util';
+import {exec as _exec} from 'node:child_process';
+import {access, rm, readFile, writeFile} from 'node:fs/promises';
 
 import {
   getBareModuleSpecifiersFromDir,

@@ -17,20 +17,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24.5
-          cache: 'npm'
+          bun-version: latest
           cache-dependency-path: package-lock.json
 
       - name: NPM install
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Lint
-        run: npm run lint
+        run: bun run lint
 
       - name: Check formatting
-        run: npm run format:check
+        run: bun run format:check
 
   tests-local:
     runs-on: ubuntu-latest
@@ -41,10 +40,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24.5
-          cache: 'npm'
+          bun-version: latest
           cache-dependency-path: package-lock.json
 
       # - uses: google/wireit@setup-github-actions-caching/v2
@@ -53,19 +51,19 @@ jobs:
         run: node --version && npm --version
         
       - name: NPM install
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Install playwright browsers
-        run: npx playwright install --with-deps
+        run: bunx playwright install --with-deps
 
       - name: Build
-        run: npm run build
+        run: bun run build
 
       - name: Test
         env:
           BROWSERS: preset:local
           CONCURRENT_BROWSERS: 3
-        run: npm run test
+        run: bun run test
 
   windows-tools:
     runs-on: windows-latest
@@ -76,21 +74,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24.5
-          cache: 'npm'
+          bun-version: latest
           cache-dependency-path: package-lock.json
 
       # - uses: google/wireit@setup-github-actions-caching/v2
 
       - name: NPM install
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Install playwright browsers
-        run: npx playwright install --with-deps
+        run: bunx playwright install --with-deps
 
       - name: Test
         env:
           RUN_BROWSER_TESTS: false
-        run: npm run test:windows
+        run: bun run test:windows

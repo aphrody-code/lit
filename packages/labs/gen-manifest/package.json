@@ -15,7 +15,7 @@
   "scripts": {
     "build": "wireit",
     "test": "wireit",
-    "test:update-goldens": "UPDATE_TEST_GOLDENS=true npm run test"
+    "test:update-goldens": "UPDATE_TEST_GOLDENS=true bun run test"
   },
   "wireit": {
     "build": {

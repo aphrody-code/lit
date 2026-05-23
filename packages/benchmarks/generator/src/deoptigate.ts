@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import path from 'path';
+import path from 'node:path';
 import puppeteer from 'puppeteer';
-import fs from 'fs';
+import fs from 'node:fs';
 import deoptLogToJson from 'deoptigate/deoptigate.log.js';
 const {logToJSON} = deoptLogToJson;
 import createPage from 'deoptigate/app/lib/create-page.js';
 import mkdirp from 'mkdirp';
 import {DevServerConfig, startDevServer} from '@web/dev-server';
-import childProcess from 'child_process';
+import childProcess from 'node:child_process';
 import {URL} from 'node:url';
 
 const generate = async (deoptFolder: string) => {

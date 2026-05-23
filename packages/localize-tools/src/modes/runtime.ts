@@ -15,7 +15,7 @@ import {
   parseStringAsTemplateLiteral,
 } from '../typescript.js';
 import fsExtra from 'fs-extra';
-import * as pathLib from 'path';
+import * as pathLib from 'node:path';
 import ts from 'typescript';
 import {LitLocalizer} from '../index.js';
 import type {Locale} from '../types/locale.js';
